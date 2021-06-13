@@ -14,8 +14,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build --prod"
+    "start": "node server.js"
   },
   "license": "ISC",
   "dependencies": {
