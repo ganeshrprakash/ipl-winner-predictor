@@ -1,0 +1,53 @@
+<div class="showQuaterfinalist">
+  <div class="headerquaterFinalist">Quater Finalist</div>
+<div class="quater-finalist"><ul class="heroes">
+  <li *ngFor="let team of teams"
+    [class.selected]="team === selectedTeam"
+    (click)="onSelect(team)">
+    <span class="badge">{{team.id}}</span> {{team.name}}
+  </li>
+</ul></div></div>
+
+<div class="showSemiFinal" *ngIf="isShownSemiFinal"><div class="headerSemiFinalist">Semi Finalist</div>
+ <div class="semi-finalist" >   
+  <ul class="heroes">
+    <li *ngFor="let semi of selectedSemiFinalist;"  (click)="onSelectFinal(semi.team)">
+      <span class="badge">{{semi.team.id}}</span> {{semi.team.name}}
+    </li>
+  </ul> 
+</div> </div>
+
+<div class="showElim" *ngIf="isShownEliminator"><div class="headerElim">Eliminator</div>
+<div class="eliminator" >
+  <ul class="heroes">
+ <li *ngFor="let semi of selectedEliminator;" (click)="onSelectEliminator(semi.team)">
+   <span class="badge">{{semi.team.id}}</span> {{semi.team.name}}
+ </li>
+</ul> </div> </div>
+
+<div class="showFinal" *ngIf="isShownFinalist"><div class="headerFinalist">Finalist</div>
+ <div class="finalist" >
+   <ul class="heroes">
+  <li *ngFor="let semi of selectedFinalist;" (click)="onSelectWinner(semi.team)">
+    <span class="badge">{{semi.team.id}}</span> {{semi.team.name}}
+  </li>
+</ul> </div> </div>
+
+<div class="showWinner" *ngIf="isShownWinner"><div class="headerWinner">IPL 2021 Winner</div>
+<div class="winner" >
+  <ul class="heroes">
+ <li *ngFor="let semi of selectedWinner;" (click)="onSelectWinner(semi.team)">
+   <span class="badge">{{semi.team.id}}</span> {{semi.team.name}}
+ </li>
+</ul> </div>  </div>
+
+
+ <section>
+   <div class="wrapper">
+  <button mat-raised-button color="primary" class="button" (click)="reset()">Reset</button>
+  <div *ngIf="isShownWinner" class="wrapperSubmit">
+ <div> <button mat-raised-button color="primary" class="button" (click)="onSubmit()">Submit</button></div></div>
+</div>
+</section>
+
+ 

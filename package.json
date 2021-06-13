@@ -1,0 +1,32 @@
+{
+  "name": "ipl-winner-predictor",
+  "version": "1.0.0",
+  "description": "node server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganeshrprakash/ipl-winner-predictor"
+  },
+  "author": "GaneshKUmar Prakashbabu",
+  "engines": {
+    "node": "16.3.0",
+    "npm": "7.15.1"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build --prod"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.0.2",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
