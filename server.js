@@ -3,7 +3,6 @@ const express = require("express");
 const app = express(),
       bodyParser = require("body-parser");
       cors = require("cors");
-      port = 8080;
 
 // var corsOptions = {
 //   origin: "http://localhost:8081"
@@ -56,10 +55,9 @@ app.post('/api/user', (req, res) => {
  
 });
 
-//require("./app/routes/turorial.routes")(app);
 
 // set port, listen for requests
-const port = process.env.PORT || 8080;
+const PORT = process.env.port||'8080';
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
 });
